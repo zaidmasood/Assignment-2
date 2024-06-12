@@ -59,9 +59,23 @@ modules:
       - wholefoodsmanageplants.zip
       name: wholefoodsmanageplants
       target-path: resources/
+    - artifacts:
+      - materialsmaterials.zip
+      name: materialsmaterials
+      target-path: resources/
 - name: wholefoodsmanageplants
   type: html5
   path: app/manage_plants
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: materialsmaterials
+  type: html5
+  path: app/materials
   build-parameters:
     build-result: dist
     builder: custom

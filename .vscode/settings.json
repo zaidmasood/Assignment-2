@@ -1,9 +1,3 @@
 {
-    "actions": [
-        {
-            "id": "openReadmeFile",
-            "actionType": "FILE",
-            "uri": "file:///home/user/projects/Whole_Foods/.gen/generation.log"
-        }
-    ]
+    "SAP HANA Database Explorer.ShowXsAdvancedConnections": true
 }
