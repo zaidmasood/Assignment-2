@@ -1,7 +1,7 @@
 {
   "_version": "1.59.0",
   "sap.app": {
-    "id": "wholefoods.manageplants",
+    "id": "types.types",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -12,8 +12,8 @@
     "resources": "resources.json",
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
-      "version": "1.13.1",
-      "toolsId": "ccebe473-571e-4be6-a10b-e34e485f0fcc"
+      "version": "1.13.6",
+      "toolsId": "4057f5db-8c01-4356-8f0b-85dc25706b93"
     },
     "dataSources": {
       "mainService": {
@@ -45,7 +45,7 @@
   "sap.ui5": {
     "flexEnabled": true,
     "dependencies": {
-      "minUI5Version": "1.122.1",
+      "minUI5Version": "1.124.1",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
@@ -61,14 +61,13 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "wholefoods.manageplants.i18n.i18n"
+          "bundleName": "types.types.i18n.i18n"
         }
       },
       "": {
         "dataSource": "mainService",
         "preload": true,
         "settings": {
-          "synchronizationMode": "None",
           "operationMode": "Server",
           "autoExpandSelect": true,
           "earlyRequests": true
@@ -83,46 +82,53 @@
       "css": []
     },
     "routing": {
+      "config": {},
       "routes": [
         {
           "pattern": ":?query:",
-          "name": "plants_srvList",
-          "target": "plants_srvList"
+          "name": "types_srvList",
+          "target": "types_srvList"
         },
         {
-          "pattern": "plants_srv({key}):?query:",
-          "name": "plants_srvObjectPage",
-          "target": "plants_srvObjectPage"
+          "pattern": "types_srv({key}):?query:",
+          "name": "types_srvObjectPage",
+          "target": "types_srvObjectPage"
         }
       ],
       "targets": {
-        "plants_srvList": {
+        "types_srvList": {
           "type": "Component",
-          "id": "plants_srvList",
+          "id": "types_srvList",
           "name": "sap.fe.templates.ListReport",
           "options": {
             "settings": {
-              "contextPath": "/plants_srv",
+              "contextPath": "/types_srv",
               "variantManagement": "Page",
               "navigation": {
-                "plants_srv": {
+                "types_srv": {
                   "detail": {
-                    "route": "plants_srvObjectPage"
+                    "route": "types_srvObjectPage"
                   }
                 }
               },
-              "defaultTemplateAnnotationPath": "com.sap.vocabularies.UI.v1.SelectionPresentationVariant#tableView1"
+              "controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable"
+                  }
+                }
+              }
             }
           }
         },
-        "plants_srvObjectPage": {
+        "types_srvObjectPage": {
           "type": "Component",
-          "id": "plants_srvObjectPage",
+          "id": "types_srvObjectPage",
           "name": "sap.fe.templates.ObjectPage",
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/plants_srv"
+              "contextPath": "/types_srv"
             }
           }
         }

@@ -30,3 +30,13 @@ entity Materials {
     modifiedAt: Timestamp @cds.on.insert: $now @cds.on.update: $now;
     modifiedBy: String(20) @cds.on.insert: $user @cds.on.update: $user;
 }
+
+entity Types{
+    key MTART:String(9);
+    MTARTTX:String(40);
+    createdAt: Timestamp @cds.on.insert: $now;
+    createdBy: String(20) @cds.on.insert: $user;
+    modifiedAt: Timestamp @cds.on.insert: $now @cds.on.update: $now;
+    modifiedBy: String(20) @cds.on.insert: $user @cds.on.update: $user;
+
+}

@@ -63,6 +63,10 @@ modules:
       - materialsmaterials.zip
       name: materialsmaterials
       target-path: resources/
+    - artifacts:
+      - typestypes.zip
+      name: typestypes
+      target-path: resources/
 - name: wholefoodsmanageplants
   type: html5
   path: app/manage_plants
@@ -76,6 +80,16 @@ modules:
 - name: materialsmaterials
   type: html5
   path: app/materials
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: typestypes
+  type: html5
+  path: app/types
   build-parameters:
     build-result: dist
     builder: custom

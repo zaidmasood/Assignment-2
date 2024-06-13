@@ -4,6 +4,31 @@ annotate service.materials_srv with @(
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
+            Value : MATNR,
+            Label : '{i18n>Matnr}',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : MAKTX,
+            Label : '{i18n>Maktx}',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : MTART,
+            Label : '{i18n>Mtart}',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : MATKL,
+            Label : '{i18n>Matkl}',
+        },
+        {
+            $Type : 'UI.DataField',
+            Value : UOM,
+            Label : '{i18n>Uom}',
+        },
+        {
+            $Type : 'UI.DataField',
             Value : createdAt,
             Label : '{i18n>Createdat}',
         },
@@ -14,21 +39,6 @@ annotate service.materials_srv with @(
         },
         {
             $Type : 'UI.DataField',
-            Value : MAKTX,
-            Label : '{i18n>Maktx}',
-        },
-        {
-            $Type : 'UI.DataField',
-            Value : MATKL,
-            Label : '{i18n>Matkl}',
-        },
-        {
-            $Type : 'UI.DataField',
-            Value : MATNR,
-            Label : '{i18n>Matnr}',
-        },
-        {
-            $Type : 'UI.DataField',
             Value : modifiedAt,
             Label : '{i18n>Modifiedat}',
         },
@@ -36,16 +46,6 @@ annotate service.materials_srv with @(
             $Type : 'UI.DataField',
             Value : modifiedBy,
             Label : '{i18n>Modifiedby}',
-        },
-        {
-            $Type : 'UI.DataField',
-            Value : MTART,
-            Label : '{i18n>Mtart}',
-        },
-        {
-            $Type : 'UI.DataField',
-            Value : UOM,
-            Label : '{i18n>Uom}',
         },
     ]
 );
