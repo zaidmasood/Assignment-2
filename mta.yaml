@@ -67,6 +67,10 @@ modules:
       - typestypes.zip
       name: typestypes
       target-path: resources/
+    - artifacts:
+      - groupsgroups.zip
+      name: groupsgroups
+      target-path: resources/
 - name: wholefoodsmanageplants
   type: html5
   path: app/manage_plants
@@ -90,6 +94,16 @@ modules:
 - name: typestypes
   type: html5
   path: app/types
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: groupsgroups
+  type: html5
+  path: app/groups
   build-parameters:
     build-result: dist
     builder: custom

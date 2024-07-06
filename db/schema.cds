@@ -40,3 +40,13 @@ entity Types{
     modifiedBy: String(20) @cds.on.insert: $user @cds.on.update: $user;
 
 }
+
+entity Groups{
+    key MATKL:String(9);
+    MATKLTX:String(40);
+    createdAt: Timestamp @cds.on.insert: $now;
+    createdBy: String(20) @cds.on.insert: $user;
+    modifiedAt: Timestamp @cds.on.insert: $now @cds.on.update: $now;
+    modifiedBy: String(20) @cds.on.insert: $user @cds.on.update: $user;
+
+}
